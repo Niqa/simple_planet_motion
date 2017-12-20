@@ -1,0 +1,143 @@
+body {
+    background: #181733;
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+}
+.planet-container{
+
+
+    position: absolute;
+    /* Positions the top-left corner of the image to be *
+    /* in the middle of the box */
+    top: 50%;
+    left: 50%;
+
+    /* Play with these numbers to see what it does */
+    height: 200px;
+    width: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    background: linear-gradient(150deg, #f9026d, #730F8E, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 128px #f9026d;
+}
+.shine{
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 65px solid transparent;
+    border-top: 28px solid #eb6db4;
+    border-radius: 50%;
+    transform: rotate(-40deg);
+    top: 30px;
+    left: 25px;
+}
+.shine::after{
+    content: "";
+    position: absolute;
+    height: 160px;
+    width: 15px;
+    border-radius: 10%;
+    left: -78px;
+    top: -16px;
+}
+.shine-2 {
+    position: absolute;
+    width: 13px;
+    height: 11px;
+    background: #eb6db4;
+    border-radius: 100px;
+    top: 25px;
+    left: 110.5px;
+    transform: rotate(-25deg);
+}
+.shine-2::after {
+ @extend .shine-2;
+     content: "";
+     top: 9px;
+     left: 43.5px;
+     transform: rotate(206deg);
+     width: 12px;
+     height: 10px;
+ }
+
+.planet2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px rgba(141, 255, 0, 0.5);
+    background: #8ee600;
+}
+
+.planet2-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+    border-radius: 50%;
+    -webkit-animation: spin-right 10s linear infinite;
+    -moz-animation: spin-right 10s linear infinite;
+    -ms-animation: spin-right 10s linear infinite;
+    -o-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: -25px;
+    margin-top: -25px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 16px 0px rgba(255, 255, 255, .6);
+    background: lightgray;
+}
+
+.moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110px;
+    height: 80px;
+    margin-top: -285px;
+    margin-left: -45px;
+    border-radius: 50%;
+    -webkit-animation: spin-right 10s linear infinite;
+    -moz-animation: spin-right 10s linear infinite;
+    -ms-animation: spin-right 10s linear infinite;
+    -o-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+}
+
+@-webkit-keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
